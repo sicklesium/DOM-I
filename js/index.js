@@ -51,15 +51,26 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let ctaElement = document.querySelector('.cta-text');
 ctaElement.style.marginLeft = '100px'
+ctaElement.style.alignText = 'center'
 
 let headerText = document.getElementsByTagName('h1');
-headerText[0].textContent = siteContent.cta.h1
-headerText[0].style.width = '41%'
-headerText[0].style.textAlign = 'center'
+headerText[0].textContent = "DOM"
+// headerText[0].style.width = '41%'
+
+let headerTwo = document.createElement('h1');
+let headerTwoText = document.createTextNode('Is');
+headerTwo.appendChild(headerTwoText);
+headerText[0].appendChild(headerTwo);
+
+let headerThree = document.createElement('h1');
+let headerThreeText = document.createTextNode('Awesome');
+headerThree.appendChild(headerThreeText);
+headerText[0].appendChild(headerThree);
+
 
 let buttonText = document.getElementsByTagName('button');
 buttonText[0].textContent = siteContent.cta.button
-buttonText[0].style.marginLeft = '50px'
+// buttonText[0].style.marginLeft = '50px'
 
 // H4s
 
