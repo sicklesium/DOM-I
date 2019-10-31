@@ -49,11 +49,17 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // CTA
 
+let ctaElement = document.querySelector('.cta-text');
+ctaElement.style.marginLeft = '100px'
+
 let headerText = document.getElementsByTagName('h1');
 headerText[0].textContent = siteContent.cta.h1
+headerText[0].style.width = '41%'
+headerText[0].style.textAlign = 'center'
 
 let buttonText = document.getElementsByTagName('button');
 buttonText[0].textContent = siteContent.cta.button
+buttonText[0].style.marginLeft = '50px'
 
 // H4s
 
@@ -71,7 +77,6 @@ header4Text[5].textContent = siteContent["contact"]["contact-h4"]
 // Paragraphs
 
 let paragraphText = document.querySelectorAll('p');
-console.log(paragraphText);
 
 paragraphText[0].textContent = siteContent["main-content"]["features-content"]
 paragraphText[1].textContent = siteContent["main-content"]["about-content"]
@@ -81,19 +86,43 @@ paragraphText[3].textContent = siteContent["main-content"]["product-content"]
 paragraphText[4].textContent = siteContent["main-content"]["vision-content"]
 
 paragraphText[5].textContent = siteContent.contact.address
+paragraphText[5].style.width = '20%'
 paragraphText[6].textContent = siteContent.contact.phone
 paragraphText[7].textContent = siteContent.contact.email
 
 // Navigation
 
 let linkText = document.querySelectorAll('a');
+let navi = document.getElementsByTagName('nav');
 
 linkText[0].textContent = siteContent["nav"]["nav-item-1"]
+linkText[0].style.color = 'green'
 linkText[1].textContent = siteContent["nav"]["nav-item-2"]
+linkText[1].style.color = 'green'
 linkText[2].textContent = siteContent["nav"]["nav-item-3"]
+linkText[2].style.color = 'green'
 linkText[3].textContent = siteContent["nav"]["nav-item-4"]
+linkText[3].style.color = 'green'
 linkText[4].textContent = siteContent["nav"]["nav-item-5"]
+linkText[4].style.color = 'green'
 linkText[5].textContent = siteContent["nav"]["nav-item-6"]
+linkText[5].style.color = 'green'
+
+let firstChild = document.createElement('a');
+let firstChildText = document.createTextNode('First');
+firstChild.appendChild(firstChildText);
+firstChild.href = '#';
+firstChild.style.color = 'green'
+navi[0].prepend(firstChild);
+
+let lastChild = document.createElement('a');
+let lastChildText = document.createTextNode('Last');
+lastChild.appendChild(lastChildText);
+lastChild.href = '#';
+lastChild.style.color = 'green'
+navi[0].appendChild(lastChild);
+
+console.log(linkText);
 
 // Footer
 let footerText = document.querySelector('footer').children;
