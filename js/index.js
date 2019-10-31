@@ -50,12 +50,12 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // CTA
 
 let headerText = document.getElementsByTagName('h1');
-headerText[0].textContent = siteContent["cta"]["h1"]
+headerText[0].textContent = siteContent.cta.h1
 
 let buttonText = document.getElementsByTagName('button');
-buttonText[0].textContent = siteContent["cta"]["button"]
+buttonText[0].textContent = siteContent.cta.button
 
-// Main Content
+// H4s
 
 let header4Text = document.querySelectorAll('h4');
 
@@ -67,6 +67,22 @@ header4Text[3].textContent = siteContent["main-content"]["product-h4"]
 header4Text[4].textContent = siteContent["main-content"]["vision-h4"]
 
 header4Text[5].textContent = siteContent["contact"]["contact-h4"]
+
+// Paragraphs
+
+let paragraphText = document.querySelectorAll('p');
+console.log(paragraphText);
+
+paragraphText[0].textContent = siteContent["main-content"]["features-content"]
+paragraphText[1].textContent = siteContent["main-content"]["about-content"]
+
+paragraphText[2].textContent = siteContent["main-content"]["services-content"]
+paragraphText[3].textContent = siteContent["main-content"]["product-content"]
+paragraphText[4].textContent = siteContent["main-content"]["vision-content"]
+
+paragraphText[5].textContent = siteContent.contact.address
+paragraphText[6].textContent = siteContent.contact.phone
+paragraphText[7].textContent = siteContent.contact.email
 
 // Navigation
 
