@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// CTA
+
+let headerText = document.getElementsByTagName('h1');
+headerText[0].textContent = siteContent["cta"]["h1"]
+
+let buttonText = document.getElementsByTagName('button');
+buttonText[0].textContent = siteContent["cta"]["button"]
+
+// Main Content
+
+let header4Text = document.querySelectorAll('h4');
+
+header4Text[0].textContent = siteContent["main-content"]["features-h4"]
+header4Text[1].textContent = siteContent["main-content"]["about-h4"]
+
+header4Text[2].textContent = siteContent["main-content"]["services-h4"]
+header4Text[3].textContent = siteContent["main-content"]["product-h4"]
+header4Text[4].textContent = siteContent["main-content"]["vision-h4"]
+
+header4Text[5].textContent = siteContent["contact"]["contact-h4"]
+
+// Navigation
+
+let linkText = document.querySelectorAll('a');
+
+linkText[0].textContent = siteContent["nav"]["nav-item-1"]
+linkText[1].textContent = siteContent["nav"]["nav-item-2"]
+linkText[2].textContent = siteContent["nav"]["nav-item-3"]
+linkText[3].textContent = siteContent["nav"]["nav-item-4"]
+linkText[4].textContent = siteContent["nav"]["nav-item-5"]
+linkText[5].textContent = siteContent["nav"]["nav-item-6"]
+
+// Footer
+let footerText = document.querySelector('footer').children;
+footerText[0].textContent = siteContent.footer.copyright
